@@ -12,21 +12,56 @@
     <script defer src="main.js"></script>
   </head>
   <body>
+    <!-- SVG Icon Sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M3 7l9 6l9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="icon-chat" viewBox="0 0 24 24">
+        <path d="M20 4H4a2 2 0 0 0-2 2v14l4-4h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="currentColor"/>
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M8 3v4M16 3v4M3 9h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="icon-clipboard" viewBox="0 0 24 24">
+        <rect x="6" y="4" width="12" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M9 2h6v4H9z" fill="none" stroke="currentColor" stroke-width="2"/>
+      </symbol>
+      <symbol id="icon-check-circle" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+    </svg>
     <!-- Header / Nav -->
     <header class="site-header">
       <div class="container nav">
         <img src="logo.png" alt="VCar Clube" class="logo-img" />
         <nav class="nav-links" id="navLinks">
-          <a href="#vantagens">Vantagens</a>
+          <a href="#home">Início</a>
+          <a href="#solucao">Solução</a>
+          <a href="#planos">Planos</a>
           <a href="#funciona">Como Funciona</a>
-          <a href="#mvv">Missão, Visão e Valores</a>
-          <a href="#oficinas">Para Oficinas</a>
-          <a href="#faq">Perguntas</a>
-          <a href="#contato">Contato</a>
+          <a href="#sobre">Sobre Nós</a>
+          <a href="#faq">Dúvidas</a>
+          <a href="#associado">Seja Sócio</a>
         </nav>
         <div class="nav-ctas">
-          <a class="btn btn-invert" href="https://socio.vcarclube.com.br/" target="_blank" rel="noopener">Seja Sócio</a>
-          <a class="btn btn-primary" href="https://credenciado.vcarclube.com.br/" target="_blank" rel="noopener">Credenciar Oficina</a>
+          <div class="dropdown" id="headerAccess">
+            <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Acessar <span class="dropdown-caret">▾</span></a>
+            <div class="dropdown-menu" role="menu">
+              <a class="dropdown-item" href="https://socio.vcarclube.com.br/" target="_blank" rel="noopener" role="menuitem">Sócio</a>
+              <a class="dropdown-item" href="https://credenciado.vcarclube.com.br/" target="_blank" rel="noopener" role="menuitem">Credenciado</a>
+              <a class="dropdown-item" href="https://painel.vcarclube.com.br/" target="_blank" rel="noopener" role="menuitem">Administrativo</a>
+            </div>
+          </div>
           <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
         </div>
       </div>
@@ -36,22 +71,18 @@
     <section id="home" class="hero">
       <div class="container hero-content">
         <div class="hero-text">
-          <h1>Plano de Saúde Veicular para Sócios e Oficinas</h1>
+          <h1>A saúde do seu carro em primeiro lugar.</h1>
           <p>
-            O VCar Clube conecta motoristas e oficinas credenciadas em um ecossistema
-            de manutenção inteligente, com economia, transparência e suporte 24h.
+            Conheça o plano de manutenção automotiva da VCAR Clube! Previsibilidade, qualidade e confiança.
           </p>
           <div class="hero-bullets">
-            <div class="bullet">Economia real em serviços e peças</div>
-            <div class="bullet">Atendimento qualificado e garantido</div>
-            <div class="bullet">Gestão simples pelo app</div>
+            <div class="bullet"><svg class="icon"><use href="#icon-check"/></svg> 100% isenção de mão de obra em serviços cobertos</div>
+            <div class="bullet"><svg class="icon"><use href="#icon-check"/></svg> Troca de óleo incluída até 2x por ano</div>
+            <div class="bullet"><svg class="icon"><use href="#icon-check"/></svg> Rede de oficinas credenciadas e padrão de qualidade</div>
           </div>
           <div class="hero-ctas">
-            <a class="btn btn-primary" href="https://adm.vcarclube.com.br/socioMenu.html" target="_blank" rel="noopener">Sou Sócio</a>
-            <a class="btn btn-secondary" href="https://painel.vcarclube.com.br/" target="_blank" rel="noopener">Sou Oficina</a>
+            <a class="btn btn-primary" href="#associado">Quero proteger meu carro agora!</a>
           </div>
-          <br>
-          <br>
         </div>
         <div class="hero-media">
           <div class="ui-preview">
@@ -71,40 +102,95 @@
       </div>
     </section>
 
-    <!-- Vantagens -->
+    <!-- Destaques / Benefícios -->
     <section id="vantagens" class="section">
       <div class="container">
-        <h2>Por que escolher o VCar Clube?</h2>
-        <p class="section-lead">Benefícios reais para quem dirige e para quem atende.</p>
+        <h2>Descubra por que a VCAR Clube é a melhor escolha</h2>
+        <p class="section-lead">Benefícios claros e foco na saúde do seu carro.</p>
 
         <div class="grid">
           <article class="card">
-            <h3>Para Sócios</h3>
-            <ul class="checklist">
-              <li>Economia em manutenção preventiva e corretiva</li>
-              <li>Rede de oficinas credenciadas e qualificadas</li>
-              <li>Garantia e transparência nos serviços</li>
-              <li>Atendimento 24h e suporte pelo app</li>
-            </ul>
+            <h3>100% Isenção de Mão de Obra</h3>
+            <p>Sem sustos! Os custos de mão de obra em serviços cobertos ficam por nossa conta.</p>
           </article>
           <article class="card">
-            <h3>Para Oficinas</h3>
-            <ul class="checklist">
-              <li>Mais clientes e fluxo constante</li>
-              <li>Pagamentos garantidos e ágeis</li>
-              <li>Gestão de serviços integrada</li>
-              <li>Divulgação e confiança da marca</li>
-            </ul>
+            <h3>Troca de Óleo Incluída</h3>
+            <p>Até 2 trocas por ano, com óleo e filtro inclusos e garantia VCAR.</p>
           </article>
           <article class="card">
-            <h3>Para Todos</h3>
+            <h3>Previsibilidade Financeira</h3>
+            <p>Pagamento fixo mensal via cartão de crédito. Serenidade no bolso!</p>
+          </article>
+          <article class="card">
+            <h3>Rede Credenciada</h3>
+            <p>Oficinas qualificadas, peças confiáveis e atendimento padronizado.</p>
+          </article>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#planos">Saiba mais sobre os planos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nossa Solução -->
+    <section id="solucao" class="section section-alt">
+      <div class="container">
+        <h2>Descubra o plano ideal para o seu carro!</h2>
+        <p class="section-lead">Cada veículo é avaliado por marca, modelo e ano para encontrar o plano certo.</p>
+        <div class="grid">
+          <article class="card">
+            <h3>Como funciona?</h3>
             <ul class="checklist">
-              <li>Processos padronizados e seguros</li>
-              <li>Comunicação clara e registro de histórico</li>
-              <li>Melhor experiência e satisfação</li>
-              <li>Comunidade que valoriza o cuidado com o veículo</li>
+              <li>Informe marca, modelo e ano do seu veículo.</li>
+              <li>Clique em “Pesquisar”.</li>
+              <li>Veja seu plano: Padrão, Premium ou Super Premium, com valor da mensalidade.</li>
+            </ul>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://socio.vcarclube.com.br/" target="_blank" rel="noopener">Simule agora o plano</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planos e Preços -->
+    <section id="planos" class="section">
+      <div class="container">
+        <h2>Planos e Preços</h2>
+        <p class="section-lead">Encontre o plano perfeito para garantir a saúde do seu carro.</p>
+        <div class="grid grid-plans">
+          <article class="card plan">
+            <h3>Padrão</h3>
+            <div class="price">R$ 99,91 <span>/ mês</span></div>
+            <ul class="features">
+              <li>Troca de óleo: até 2x/ano com óleo e filtro</li>
+              <li>Sistema de freios: até 2 manutenções/ano (não eletrônicos)</li>
+              <li>Direção e suspensão: alinhamento, balanceamento e peças</li>
             </ul>
           </article>
+          <article class="card plan plan-featured">
+            <h3>Premium</h3>
+            <div class="badge">Mais escolhido</div>
+            <div class="price">R$ 116,58 <span>/ mês</span></div>
+            <ul class="features">
+              <li>Tudo do Padrão + cobertura estendida</li>
+              <li>Atendimento prioritário nas oficinas</li>
+              <li>Benefícios adicionais negociados</li>
+            </ul>
+          </article>
+          <article class="card plan">
+            <h3>Super Premium</h3>
+            <div class="price">R$ 133,25 <span>/ mês</span></div>
+            <ul class="features">
+              <li>Tudo do Premium + escopo avançado</li>
+              <li>Maior previsibilidade para veículos de alto padrão</li>
+              <li>Suporte dedicado</li>
+            </ul>
+          </article>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#associado">Quero me tornar um associado!</a>
         </div>
       </div>
     </section>
@@ -112,40 +198,32 @@
     <!-- Como Funciona -->
     <section id="funciona" class="section section-alt">
       <div class="container">
-        <h2>Como funciona</h2>
+        <h2>Cuide do seu carro em 3 passos simples!</h2>
         <div class="steps">
           <div class="step">
             <span class="step-number">1</span>
             <div>
-              <h4>Sócios</h4>
-              <p>Escolhem um plano e acessam serviços com descontos e garantia.</p>
+              <h4><svg class="icon"><use href="#icon-clipboard"/></svg> Contrate seu plano</h4>
+              <p>Faça sua adesão agora mesmo pelo app da VCAR Clube.</p>
             </div>
           </div>
           <div class="step">
             <span class="step-number">2</span>
             <div>
-              <h4>Oficinas</h4>
-              <p>Credenciam-se, recebem demandas e gerenciam ordens pelo painel.</p>
+              <h4><svg class="icon"><use href="#icon-calendar"/></svg> Agende seu serviço</h4>
+              <p>Escolha uma oficina credenciada próxima e confiável.</p>
             </div>
           </div>
           <div class="step">
             <span class="step-number">3</span>
             <div>
-              <h4>Atendimento</h4>
-              <p>Serviços executados com padrão VCar, com avaliação e histórico.</p>
-            </div>
-          </div>
-          <div class="step">
-            <span class="step-number">4</span>
-            <div>
-              <h4>Suporte</h4>
-              <p>Time disponível 24h para dúvidas, emergências e orientação.</p>
+              <h4><svg class="icon"><use href="#icon-check-circle"/></svg> Pronto</h4>
+              <p>Deixe o trabalho pesado por nossa conta — sem surpresas!</p>
             </div>
           </div>
         </div>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://socio.vcarclube.com.br/" target="_blank" rel="noopener">Ver planos para Sócios</a>
-          <a class="btn btn-secondary" href="#oficinas">Credenciar minha Oficina</a>
+          <a class="btn btn-primary" href="https://socio.vcarclube.com.br/" target="_blank" rel="noopener">Contrate agora pelo App</a>
         </div>
       </div>
     </section>
@@ -168,28 +246,79 @@
       </div>
     </section>
 
-    <!-- Missão, Visão e Valores -->
-    <section id="mvv" class="section">
+    <!-- Questões do Sócio -->
+    <section id="socio" class="section">
       <div class="container">
-        <h2>Missão, Visão e Valores</h2>
-        <p class="section-lead">Conheça nosso propósito e como entregamos valor.</p>
+        <h2>Questões do Sócio</h2>
+        <p class="section-lead">Principais dúvidas e pontos de atenção para membros do clube.</p>
+        <div class="grid">
+          <article class="card">
+            <h3>Custos e Economia</h3>
+            <p>Como funciona a mensalidade e quais economias reais posso esperar?</p>
+          </article>
+          <article class="card">
+            <h3>Serviços Inclusos</h3>
+            <p>O que está coberto, como agendo e quais limites existem?</p>
+          </article>
+          <article class="card">
+            <h3>Rede de Oficinas</h3>
+            <p>Como escolher uma oficina credenciada e garantir a qualidade?</p>
+          </article>
+          <article class="card">
+            <h3>App e Suporte</h3>
+            <p>Uso do aplicativo, histórico do veículo e atendimento 24h.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Questões do Credenciado -->
+    <section id="credenciado" class="section section-alt">
+      <div class="container">
+        <h2>Questões do Credenciado</h2>
+        <p class="section-lead">Dúvidas comuns e orientações para oficinas credenciadas.</p>
+        <div class="grid">
+          <article class="card">
+            <h3>Demanda e Clientes</h3>
+            <p>Como recebo solicitações e como é feita a distribuição de serviços?</p>
+          </article>
+          <article class="card">
+            <h3>Pagamentos</h3>
+            <p>Prazos, formas de repasse e garantias de pagamento pela plataforma.</p>
+          </article>
+          <article class="card">
+            <h3>Gestão Operacional</h3>
+            <p>Uso do painel, controle de ordens, estoque e avaliação dos serviços.</p>
+          </article>
+          <article class="card">
+            <h3>Suporte e Padrão</h3>
+            <p>Treinamentos, requisitos de qualidade e como falar com o suporte.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="section">
+      <div class="container">
+        <h2>Conheça a VCAR Clube</h2>
+        <p class="section-lead">Missão, visão e valores que guiam nosso trabalho.</p>
         <div class="grid">
           <article class="card">
             <h3>Missão</h3>
-            <p>Promover cuidado contínuo com veículos, conectando sócios e oficinas com transparência, economia e padrão de qualidade.</p>
+            <p>Garantir tranquilidade e economia para motoristas ao facilitar o cuidado com a saúde do veículo.</p>
           </article>
           <article class="card">
             <h3>Visão</h3>
-            <p>Ser a maior comunidade de manutenção veicular do Brasil, reconhecida pela experiência do cliente e eficiência operacional.</p>
+            <p>Tornar-se referência nacional em planos de saúde veicular.</p>
           </article>
           <article class="card">
             <h3>Valores</h3>
             <ul class="checklist">
-              <li>Transparência e confiança</li>
+              <li>Transparência, economia e confiança</li>
               <li>Qualidade e segurança</li>
               <li>Respeito e parceria</li>
               <li>Inovação e simplicidade</li>
-              <li>Compromisso com resultados</li>
             </ul>
           </article>
         </div>
@@ -221,7 +350,7 @@
     </section>
 
     <!-- App -->
-    <section class="section app-section">
+    <section id="app" class="section app-section">
       <div class="container app">
         <div class="app-text">
           <h2>VCar no seu bolso</h2>
@@ -246,33 +375,87 @@
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="section">
+      <div class="container">
+        <h2>Depoimentos de quem já é VCAR</h2>
+        <p class="section-lead">Confiança que vem da experiência real dos nossos associados.</p>
+        <div class="grid">
+          <article class="card">
+            <div class="rating">
+              <svg class="icon"><use href="#icon-star"/></svg>
+              <svg class="icon"><use href="#icon-star"/></svg>
+              <svg class="icon"><use href="#icon-star"/></svg>
+              <svg class="icon"><use href="#icon-star"/></svg>
+              <svg class="icon"><use href="#icon-star"/></svg>
+            </div>
+            <p>“Serviço impecável e sem sustos no bolso. Recomendo!”</p>
+            <small>Mariana S.</small>
+          </article>
+          <article class="card">
+            <div class="rating">
+              <svg class="icon"><use href="#icon-star"/></svg>
+              <svg class="icon"><use href="#icon-star"/></svg>
+              <svg class="icon"><use href="#icon-star"/></svg>
+              <svg class="icon"><use href="#icon-star"/></svg>
+              <svg class="icon"><use href="#icon-star"/></svg>
+            </div>
+            <p>“Agendei pelo app e fui atendido rápido na oficina credenciada.”</p>
+            <small>Carlos A.</small>
+          </article>
+          <article class="card">
+            <div class="rating">
+              <svg class="icon"><use href="#icon-star"/></svg>
+              <svg class="icon"><use href="#icon-star"/></svg>
+              <svg class="icon"><use href="#icon-star"/></svg>
+              <svg class="icon"><use href="#icon-star"/></svg>
+            </div>
+            <p>“Troca de óleo e revisão preventiva sem dor de cabeça. Excelente!”</p>
+            <small>Luísa P.</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seja um Associado Agora -->
+    <section id="associado" class="section section-alt">
+      <div class="container">
+        <h2>Proteja seu carro com a VCAR Clube</h2>
+        <p class="section-lead">Adira ao plano e garanta manutenção tranquila, sem surpresas e com total confiança.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://socio.vcarclube.com.br/" target="_blank" rel="noopener">Faça sua adesão pelo App</a>
+          <a class="btn btn-outline" href="#app">Baixe o app no Android ou iOS</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dúvidas Frequentes -->
     <section id="faq" class="section">
       <div class="container">
-        <h2>Perguntas Frequentes</h2>
+        <h2>Dúvidas Frequentes</h2>
         <div class="faq">
           <div class="faq-item">
-            <button class="faq-question">O que é o VCar Clube?</button>
+            <button class="faq-question">Como funciona a isenção de mão de obra?</button>
             <div class="faq-answer">
-              O VCar é um plano de saúde veicular que conecta sócios a uma rede de oficinas credenciadas, oferecendo economia e padrão de qualidade.
+              O custo da mão de obra é 100% pago pela VCAR Clube em serviços cobertos. O cliente é responsável apenas pelas peças.
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-question">Como os descontos funcionam?</button>
+            <button class="faq-question">Preciso usar peças da oficina credenciada?</button>
             <div class="faq-answer">
-              Cada plano possui faixas de benefícios. Os serviços são realizados em oficinas credenciadas com preços negociados e garantia VCar.
+              Não. Você pode levar as peças que desejar ou adquiri-las diretamente na oficina, com acréscimo de 20% sobre o valor da NF-e.
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-question">Posso trocar de plano?</button>
+            <button class="faq-question">O que está incluso no plano?</button>
             <div class="faq-answer">
-              Sim. Você pode alterar ou atualizar seu plano a qualquer momento, conforme suas necessidades de uso.
+              Troca de óleo, manutenção dos sistemas de freios, suspensão, direção e preventiva de motor.
             </div>
           </div>
           <div class="faq-item">
-            <button class="faq-question">Como credencio minha oficina?</button>
+            <button class="faq-question">Posso ver mais dúvidas?</button>
             <div class="faq-answer">
-              Acesse o portal de credenciamento em <a href="https://credenciado.vcarclube.com.br/" target="_blank" rel="noopener">credenciado.vcarclube.com.br</a> e siga as instruções.
+              Sim. Clique em “Ver mais dúvidas” para detalhes adicionais.
             </div>
           </div>
         </div>
@@ -280,39 +463,34 @@
     </section>
 
     <!-- Contato -->
-    <section id="contato" class="section section-alt">
-      <div class="container contact">
-        <div class="contact-info">
-          <div class="cred-banner">
-            <div class="cred-text">
-              <h3>Seja uma Oficina Credenciada</h3>
-              <p>Receba clientes pré-qualificados, com pagamento garantido e gestão simplificada.</p>
-            </div>
-            <a class="btn btn-cred" href="https://credenciado.vcarclube.com.br/" target="_blank" rel="noopener">Ir para credenciamento</a>
-          </div>
-          <h3>Informações da VCar</h3>
-          <div class="contact-box">
-            <p><strong>Endereço</strong></p>
-            <p>Rua 12 Chácara 141/1 Lote 27/29</p>
-            <p>Vicente Pires - Brasília/DF</p>
-            <p>CEP: 72006-360</p>
-          </div>
-          <div class="contact-box">
-            <p><strong>Telefones</strong></p>
-            <p>WhatsApp: (61) 98101-0028</p>
-          </div>
-          <div class="contact-box">
-            <p><strong>E-mail</strong></p>
-            <p>Credenciamento: parceiros@vcarclube.com.br</p>
-            <p>Suporte Técnico: suporte@vcarclube.com.br</p>
-            <p>Financeiro: financeiro@vcarclube.com.br</p>
-          </div>
-          <div class="contact-box">
-            <p><strong>Horário de Atendimento</strong></p>
-            <p>Segunda a Sexta: 8h às 18h</p>
-            <p>Sábado: 9h às 13h</p>
-          </div>
+    <section id="contato" class="section">
+      <div class="container contact-slim contact-card-simple">
+        <h2>Entre em Contato</h2>
+        <p class="section-lead">Fale com nosso time e tire suas dúvidas.</p>
+        <div class="contact-actions">
+          <a class="btn btn-outline" href="#" id="btnChat"><svg class="icon"><use href="#icon-chat"/></svg> Abrir chat</a>
+          <a class="btn btn-outline" href="mailto:contato@vcarclube.com.br"><svg class="icon"><use href="#icon-mail"/></svg> Enviar e-mail</a>
+          <a class="btn btn-primary" href="#faq"><svg class="icon"><use href="#icon-clipboard"/></svg> Ver dúvidas frequentes</a>
         </div>
+        <form class="form contact-form">
+          <div class="form-row">
+            <div class="form-control">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
+            </div>
+            <div class="form-control">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="voce@exemplo.com" required />
+            </div>
+          </div>
+          <div class="form-control">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+          </div>
+          <div class="cta-row">
+            <button type="submit" class="btn btn-primary"><svg class="icon"><use href="#icon-mail"/></svg> Enviar mensagem</button>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -324,6 +502,10 @@
             <img src="./logo.png" alt="VCar Clube" class="logo-img" />
           </a>
           <p>Plano de saúde veicular — cuidado que gera valor.</p>
+          <div class="store-badges">
+            <a class="badge-store" href="#">App Store</a>
+            <a class="badge-store" href="#">Google Play</a>
+          </div>
         </div>
         <div class="footer-links">
           <div>
@@ -339,13 +521,18 @@
           </div>
           <div>
             <h4>Legal</h4>
-            <a href="#">Termos</a>
-            <a href="#">Privacidade</a>
+            <a href="#">Termos de uso</a>
+            <a href="#">Política de privacidade</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <div class="container">
+        <div class="container footer-bottom-row">
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          </div>
           <small>© 2025 VCar Clube. Todos os direitos reservados.</small>
         </div>
       </div>

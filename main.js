@@ -59,6 +59,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Hero dropdown (Acesso)
+  const heroAccess = document.getElementById('heroAccess');
+  const heroToggle = heroAccess?.querySelector('.dropdown-toggle');
+  if (heroAccess && heroToggle) {
+    heroToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      heroAccess.classList.toggle('open');
+      heroToggle.setAttribute('aria-expanded', heroAccess.classList.contains('open') ? 'true' : 'false');
+    });
+    // Fecha ao clicar fora
+    document.addEventListener('click', (e) => {
+      if (!heroAccess.contains(e.target)) {
+        heroAccess.classList.remove('open');
+        heroToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    // Fecha com ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        heroAccess.classList.remove('open');
+        heroToggle.setAttribute('aria-expanded', 'false');
+        heroToggle.focus();
+      }
+    });
+  }
+
+  // Header dropdown (Acesso)
+  const headerAccess = document.getElementById('headerAccess');
+  const headerToggle = headerAccess?.querySelector('.dropdown-toggle');
+  if (headerAccess && headerToggle) {
+    headerToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      headerAccess.classList.toggle('open');
+      headerToggle.setAttribute('aria-expanded', headerAccess.classList.contains('open') ? 'true' : 'false');
+    });
+    // Fecha ao clicar fora
+    document.addEventListener('click', (e) => {
+      if (!headerAccess.contains(e.target)) {
+        headerAccess.classList.remove('open');
+        headerToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    // Fecha com ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        headerAccess.classList.remove('open');
+        headerToggle.setAttribute('aria-expanded', 'false');
+        headerToggle.focus();
+      }
+    });
+  }
   // Form fake submit
   document.querySelectorAll('.form').forEach((form) => {
     form.addEventListener('submit', (e) => {
