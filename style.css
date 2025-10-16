@@ -178,7 +178,7 @@ img { max-width: 100%; display: block; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
 .form-control { display: grid; gap: .35rem; }
 .form-control label { font-weight: 600; }
-.form-control input, .form-control textarea { width: 100%; padding: .7rem .8rem; border: 1px solid var(--border); border-radius: .6rem; font: inherit; }
+.form-control input, .form-control textarea, .form-control select { width: 100%; padding: .7rem .8rem; border: 1px solid var(--border); border-radius: .6rem; font: inherit; background: var(--surface); }
 
 /* Removido: credenciamento integrado na seção de contato */
 
@@ -269,3 +269,40 @@ body { padding-top: 72px; }
   .nav-ctas #headerAccess .btn { display: inline-flex; }
   .nav-ctas #headerAccess .dropdown-menu { right: 0; left: auto; }
 }
+
+/* Benefícios */
+.benefits-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.5rem; }
+.benefit { display: grid; gap: .35rem; align-content: start; }
+.benefit-icon { color: var(--primary); font-size: 52px; line-height: 1; }
+.benefit h3 { margin: .25rem 0 0; color: #1e3a8a; font-size: 1.1rem; }
+.benefit p { margin: 0; color: var(--muted); }
+
+@media (max-width: 960px) {
+  .benefits-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 640px) {
+  .benefits-grid { grid-template-columns: 1fr; }
+}
+
+/* Finder de Plano */
+.plan-finder .plan-form { margin-top: .5rem; }
+.plan-result { margin-top: 1rem; }
+.plan-form select { appearance: none; -webkit-appearance: none; -moz-appearance: none; cursor: pointer; padding-right: 2.2rem; background-repeat: no-repeat; background-position: right .75rem center; background-size: 18px; transition: border-color .15s ease, box-shadow .15s ease; }
+.plan-form select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); }
+.plan-form select:hover { border-color: #cbd5e1; }
+.plan-form select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(34,197,94,.15); outline: none; }
+.plan-form select::-ms-expand { display: none; }
+.plan-suggestion { display: grid; grid-template-columns: 96px 1fr; gap: 1rem; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: .9rem; padding: 1rem; box-shadow: 0 10px 20px rgba(2,6,23,.06); }
+.plan-suggestion.accent { border-color: var(--primary); box-shadow: 0 16px 32px rgba(34,197,94,.18); }
+.plan-suggestion img { width: 96px; height: 96px; object-fit: contain; }
+.plan-suggestion h4 { margin: 0; font-size: 1.2rem; }
+.plan-suggestion .meta { color: var(--muted); margin: .25rem 0 .5rem; }
+.plan-suggestion .features { list-style: none; padding: 0; margin: 0; color: var(--muted); }
+
+@media (max-width: 640px) {
+  .plan-suggestion { grid-template-columns: 1fr; }
+  .plan-suggestion img { width: 100%; height: 120px; }
+}
+
+/* Empilhar cards na seção "Solução" */
+#solucao .grid { grid-template-columns: 1fr; }

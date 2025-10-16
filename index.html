@@ -27,6 +27,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <!-- Icon library: Iconify for rich icon sets -->
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
     <script defer src="main.js"></script>
     <!-- JSON-LD: Organization -->
     <script type="application/ld+json">
@@ -188,33 +190,66 @@
       <br>
     </section>
 
-    <!-- Destaques / Benefícios -->
+    <!-- Benefícios -->
     <section id="vantagens" class="section">
       <div class="container">
-        <h2>Descubra por que a VCAR Clube é a melhor escolha</h2>
-        <p class="section-lead">Benefícios claros e foco na saúde do seu carro.</p>
+        <h2>Benefícios e Serviços do Plano</h2>
+        <p class="section-lead">Veja o que seu carro ganha com o VCAR Clube.</p>
 
-        <div class="grid">
-          <article class="card">
-            <h3>100% Isenção de Mão de Obra</h3>
-            <p>Sem sustos! Os custos de mão de obra em serviços cobertos ficam por nossa conta.</p>
-          </article>
-          <article class="card">
-            <h3>Troca de Óleo Incluída</h3>
-            <p>Até 2 trocas por ano, com óleo e filtro inclusos e garantia VCAR.</p>
-          </article>
-          <article class="card">
-            <h3>Previsibilidade Financeira</h3>
-            <p>Pagamento fixo mensal via cartão de crédito. Serenidade no bolso!</p>
-          </article>
-          <article class="card">
-            <h3>Rede Credenciada</h3>
-            <p>Oficinas qualificadas e atendimento padronizado.</p>
-          </article>
-        </div>
+        <div class="benefits-grid">
+          <div class="benefit">
+            <span class="benefit-icon iconify" data-icon="mdi:oil" aria-hidden="true"></span>
+            <h3>Troca de óleo</h3>
+            <p>Mantém o motor do seu carro sempre em perfeito funcionamento.</p>
+          </div>
 
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#planos">Saiba mais sobre os planos</a>
+          <div class="benefit">
+            <span class="benefit-icon iconify" data-icon="mdi:car" aria-hidden="true"></span>
+            <h3>Suspensão Completa (Dianteira e Traseira)</h3>
+            <p>Garantia de conforto e segurança na direção.</p>
+          </div>
+
+          <div class="benefit">
+            <span class="benefit-icon iconify" data-icon="mdi:car-brake-abs" aria-hidden="true"></span>
+            <h3>Manutenção de Freios</h3>
+            <p>Verificação e manutenção completa, incluindo pastilhas e discos.</p>
+          </div>
+
+          <div class="benefit">
+            <span class="benefit-icon iconify" data-icon="mdi:coolant-temperature" aria-hidden="true"></span>
+            <h3>Arrefecimento</h3>
+            <p>Cuidado essencial para evitar que o motor superaqueça.</p>
+          </div>
+
+          <div class="benefit">
+            <span class="benefit-icon iconify" data-icon="mdi:car-shift-pattern" aria-hidden="true"></span>
+            <h3>Embreagem</h3>
+            <p>Reparo e manutenção para garantir trocas suaves e sem esforço.</p>
+          </div>
+
+          <div class="benefit">
+            <span class="benefit-icon iconify" data-icon="mdi:cog" aria-hidden="true"></span>
+            <h3>Correia dentada</h3>
+            <p>Realize a troca da correia dentada no tempo certo.</p>
+          </div>
+
+          <div class="benefit">
+            <span class="benefit-icon iconify" data-icon="mdi:engine-outline" aria-hidden="true"></span>
+            <h3>Motor</h3>
+            <p>Inspeção completa para manter o desempenho do motor.</p>
+          </div>
+
+          <div class="benefit">
+            <span class="benefit-icon iconify" data-icon="mdi:tow-truck" aria-hidden="true"></span>
+            <h3>Guinchos</h3>
+            <p>Em breve.</p>
+          </div>
+
+          <div class="benefit">
+            <span class="benefit-icon iconify" data-icon="mdi:car-wrench" aria-hidden="true"></span>
+            <h3>+ Outros</h3>
+            <p>Entre outros serviços para você economizar.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -222,64 +257,55 @@
     <!-- Nossa Solução -->
     <section id="solucao" class="section section-alt">
       <div class="container">
-        <h2>Descubra o plano ideal para o seu carro!</h2>
-        <p class="section-lead">Cada veículo é avaliado por marca, modelo e ano para encontrar o plano certo.</p>
+        <h2>Descubra o plano do seu carro!</h2>
+        <p class="section-lead">O valor do plano varia conforme o modelo e ano do veículo. Informe seus dados e descubra o valor exato para o seu carro.</p>
         <div class="grid">
-          <article class="card">
-            <h3>Como funciona?</h3>
-            <ul class="checklist">
-              <li>Acesse o APP.</li>
-              <li>Informe marca, modelo e ano do seu veículo.</li>
-              <li>Veja seu plano: Padrão, Premium ou Super Premium, com valor da mensalidade.</li>
-            </ul>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="https://adm.vcarclube.com.br/socioCadastro.html" target="_blank" rel="noopener">Faça agora o plano</a>
-            </div>
+          <!-- Finder de Plano -->
+          <article class="card plan-finder">
+            <h3>Descubra seu plano agora</h3>
+            <form id="planForm" class="plan-form">
+              <div class="form-row">
+                <div class="form-control">
+                  <label for="marca">Marca</label>
+                  <select id="marca" required>
+                    <option value="">Selecione...</option>
+                    <option>Chevrolet</option>
+                    <option>Fiat</option>
+                    <option>Volkswagen</option>
+                    <option>Renault</option>
+                    <option>Peugeot</option>
+                    <option>Citroën</option>
+                    <option>Toyota</option>
+                    <option>Honda</option>
+                    <option>Hyundai</option>
+                    <option>Nissan</option>
+                    <option>Ford</option>
+                    <option>BMW</option>
+                    <option>Mercedes-Benz</option>
+                    <option>Audi</option>
+                    <option>Volvo</option>
+                    <option>Land Rover</option>
+                    <option>Porsche</option>
+                  </select>
+                </div>
+                <div class="form-control">
+                  <label for="modelo">Modelo</label>
+                  <input id="modelo" type="text" placeholder="Ex: Corolla, HB20, Onix" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-control">
+                  <label for="ano">Ano</label>
+                  <input id="ano" type="number" min="1980" max="2050" step="1" placeholder="Ex: 2016" required />
+                </div>
+                <div class="form-control">
+                  <label>&nbsp;</label>
+                  <button type="submit" class="btn btn-primary"><span class="iconify icon" data-icon="mdi:magnify"></span> Encontrar meu plano</button>
+                </div>
+              </div>
+            </form>
+            <div id="planResult" class="plan-result" aria-live="polite" role="status"></div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Planos e Preços -->
-    <section id="planos" class="section">
-      <div class="container">
-        <h2>Planos e Preços</h2>
-        <p class="section-lead">Encontre o plano perfeito para garantir a saúde do seu carro.</p>
-        <div class="grid grid-plans">
-          <article class="card plan">
-            <h3>Padrão</h3>
-            <img src="car1.png">
-            <!--<div class="badge">Mais escolhido</div>-->
-            <div class="price">R$ 99,91 <span>/ mês</span></div>
-            <ul class="features" style="display: none;">
-              <li>Troca de óleo: até 2x/ano com óleo e filtro</li>
-              <li>Sistema de freios: até 2 manutenções/ano (não eletrônicos)</li>
-              <li>Direção e suspensão: alinhamento e balanceamento</li>
-            </ul>
-          </article>
-          <article class="card plan">
-            <h3>Premium</h3>
-            <img src="car2.png">
-            <div class="price">R$ 116,58 <span>/ mês</span></div>
-            <ul class="features" style="display: none;">
-              <li>Tudo do Padrão + cobertura estendida</li>
-              <li>Atendimento prioritário nas oficinas</li>
-              <li>Benefícios adicionais negociados</li>
-            </ul>
-          </article>
-          <article class="card plan">
-            <h3>Super Premium</h3>
-            <img src="car3.png">
-            <div class="price">R$ 133,25 <span>/ mês</span></div>
-            <ul class="features" style="display: none;">
-              <li>Tudo do Premium + escopo avançado</li>
-              <li>Maior previsibilidade para veículos de alto padrão</li>
-              <li>Suporte dedicado</li>
-            </ul>
-          </article>
-        </div>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#associado">Quero me tornar um associado!</a>
         </div>
       </div>
     </section>
@@ -331,58 +357,6 @@
         <div class="stat">
           <div class="stat-value">24h</div>
           <div class="stat-label">Suporte e orientação</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Para Sócio -->
-    <section id="socio" class="section section-accent">
-      <div class="container">
-        <h2 class="section-title-accent">Para Sócio</h2>
-        <p class="section-lead">Informações essenciais para membros do clube.</p>
-        <div class="grid grid-feature">
-          <article class="card feature-card">
-            <h3><svg class="icon icon-lg"><use href="#icon-star"/></svg> Custos e Economia</h3>
-            <p>Mensalidade fixa e previsível; economia real em manutenção coberta.</p>
-          </article>
-          <article class="card feature-card">
-            <h3><svg class="icon icon-lg"><use href="#icon-clipboard"/></svg> Serviços Inclusos</h3>
-            <p>Troca de óleo, freios (não eletrônicos), direção e suspensão com alinhamento.</p>
-          </article>
-          <article class="card feature-card">
-            <h3><svg class="icon icon-lg"><use href="#icon-check-circle"/></svg> Rede de Oficinas</h3>
-            <p>Atendimento em rede credenciada com padrão de qualidade e garantia.</p>
-          </article>
-          <article class="card feature-card">
-            <h3><svg class="icon icon-lg"><use href="#icon-chat"/></svg> App e Suporte</h3>
-            <p>Agende serviços, acompanhe histórico e conte com suporte 24h pelo app.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Para Credenciado -->
-    <section id="credenciado" class="section section-alt section-accent">
-      <div class="container">
-        <h2 class="section-title-accent">Para Credenciado</h2>
-        <p class="section-lead">Informações e orientações para oficinas credenciadas.</p>
-        <div class="grid grid-feature">
-          <article class="card feature-card">
-            <h3><svg class="icon icon-lg"><use href="#icon-star"/></svg> Demanda e Clientes</h3>
-            <p>Receba solicitações qualificadas e distribuição de serviços via plataforma.</p>
-          </article>
-          <article class="card feature-card">
-            <h3><svg class="icon icon-lg"><use href="#icon-check-circle"/></svg> Pagamentos</h3>
-            <p>Repasse garantido com prazos definidos e transparência nos pagamentos.</p>
-          </article>
-          <article class="card feature-card">
-            <h3><svg class="icon icon-lg"><use href="#icon-clipboard"/></svg> Gestão Operacional</h3>
-            <p>Painel para controle de ordens, estoque e avaliação dos serviços.</p>
-          </article>
-          <article class="card feature-card">
-            <h3><svg class="icon icon-lg"><use href="#icon-chat"/></svg> Suporte e Padrão</h3>
-            <p>Treinamentos, requisitos de qualidade e suporte dedicado.</p>
-          </article>
         </div>
       </div>
     </section>
