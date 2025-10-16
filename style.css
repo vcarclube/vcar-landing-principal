@@ -53,7 +53,7 @@ img { max-width: 100%; display: block; }
 .rating .icon { color: #f59e0b; }
 
 /* Header */
-.site-header { position: sticky; top: 0; z-index: 50; background: rgba(15,23,42,.85); color: #fff; backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,.06); }
+.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(15,23,42,.85); color: #fff; backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,.06); }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
 .logo { font-weight: 800; letter-spacing: .2px; font-size: 1.15rem; }
 .logo span { color: var(--primary); }
@@ -110,6 +110,16 @@ img { max-width: 100%; display: block; }
 /* Hover clean para cards */
 .card:hover { box-shadow: 0 12px 24px rgba(2,6,23,.08); transform: translateY(-1px); transition: box-shadow .2s ease, transform .2s ease; }
 
+/* Accents for focused sections */
+.section-accent { background: linear-gradient(180deg, rgba(34,197,94,.06), var(--surface-alt)); }
+.section-title-accent { display: inline-block; border-bottom: 3px solid var(--primary); padding-bottom: .25rem; }
+.grid-feature { gap: 1.25rem; }
+.feature-card { border-color: rgba(34,197,94,.35); background: linear-gradient(180deg, rgba(34,197,94,.08), #fff); }
+.feature-card h3 { display: inline-flex; align-items: center; gap: .5rem; }
+.feature-card .icon { color: var(--primary); }
+.feature-card:hover { box-shadow: 0 16px 32px rgba(34,197,94,.18); transform: translateY(-2px); }
+.icon-lg { width: 1.25rem; height: 1.25rem; }
+
 .checklist { list-style: none; padding: 0; margin: .5rem 0 0; }
 .checklist li { position: relative; padding-left: 1.4rem; margin: .4rem 0; }
 .checklist li::before { content: '✔'; position: absolute; left: 0; top: 0; color: var(--primary); font-weight: 700; }
@@ -140,8 +150,9 @@ img { max-width: 100%; display: block; }
 .app { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; align-items: center; }
 .app-text h2 { color: #fff; }
 .store-badges { display: flex; gap: .75rem; margin-top: .75rem; }
-.badge-store { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.24); padding: .6rem .9rem; border-radius: .7rem; }
+.badge-store { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.24); padding: .6rem .9rem; border-radius: .7rem; display: inline-flex; align-items: center; gap: .45rem; }
 .badge-store:hover { background: rgba(255,255,255,.18); }
+.badge-store .icon { width: 1.2rem; height: 1.2rem; }
 .phone { width: 280px; height: 520px; background: #0b1020; border: 2px solid #111827; border-radius: 2rem; box-shadow: 0 30px 60px rgba(0,0,0,.35); margin: 0 auto; }
 .phone-screen { background: rgba(255,255,255,.06); border-radius: 1.4rem; margin: .8rem; height: calc(100% - 1.6rem); overflow: hidden; }
 .screen-header { height: 48px; background: rgba(255,255,255,.08); }
@@ -222,6 +233,9 @@ img { max-width: 100%; display: block; }
   .phone { width: 220px; height: 440px; }
   .stat { padding: .9rem; }
 }
+
+/* Offset global para header fixo */
+body { padding-top: 72px; }
 
 .hero-wave svg {
     transform: scaleY(-1);

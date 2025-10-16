@@ -39,6 +39,13 @@
         <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
         <path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </symbol>
+      <!-- Brand icons -->
+      <symbol id="icon-apple" viewBox="0 0 24 24">
+        <path d="M16.5 13.5c-.3-.8-.7-1.5-1.3-2.1.6-.7 1.1-1.7 1-2.7-1 .1-1.9.6-2.6 1.3-.6.6-1 1.4-1.2 2.3-.8 0-1.6-.4-2.2-1-.6-.6-1-1.4-1.1-2.3-.9.2-1.7.6-2.4 1.3-.9.9-1.5 2.2-1.6 3.5 0 1.6.7 3 1.7 4.1.6.7 1.3 1.2 2.2 1.5.8.3 1.6.2 2.3 0 .7-.2 1.3-.6 1.8-1.1.4.5 1 .9 1.6 1.1.6.2 1.3.3 1.9.1.9-.3 1.7-1 2.2-1.8.6-.9.9-2 .9-3.1-.1-.1-.1-.1-.2-.1zm-3-9.6c.6-.7 1-1.7.9-2.7-1 .1-2 .6-2.6 1.3-.6.6-1 1.4-1.1 2.3.9 0 1.8-.4 2.4-.9z" fill="currentColor"/>
+      </symbol>
+      <symbol id="icon-google-play" viewBox="0 0 24 24">
+        <path d="M8 5v14l11-7z" fill="currentColor"/>
+      </symbol>
     </svg>
     <!-- Header / Nav -->
     <header class="site-header">
@@ -57,9 +64,9 @@
           <div class="dropdown" id="headerAccess">
             <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Acessar <span class="dropdown-caret">▾</span></a>
             <div class="dropdown-menu" role="menu">
-              <a class="dropdown-item" href="https://socio.vcarclube.com.br/" target="_blank" rel="noopener" role="menuitem">Sócio</a>
-              <a class="dropdown-item" href="https://credenciado.vcarclube.com.br/" target="_blank" rel="noopener" role="menuitem">Credenciado</a>
-              <a class="dropdown-item" href="https://painel.vcarclube.com.br/" target="_blank" rel="noopener" role="menuitem">Administrativo</a>
+              <a class="dropdown-item" href="https://adm.vcarclube.com.br/socioMenu.html" target="_blank" rel="noopener" role="menuitem">Sócio</a>
+              <a class="dropdown-item" href="https://painel.vcarclube.com.br/" target="_blank" rel="noopener" role="menuitem">Credenciado</a>
+              <a class="dropdown-item" href="https://adm.vcarclube.com.br/" target="_blank" rel="noopener" role="menuitem">Administrativo</a>
             </div>
           </div>
           <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
@@ -246,52 +253,52 @@
       </div>
     </section>
 
-    <!-- Questões do Sócio -->
-    <section id="socio" class="section">
+    <!-- Para Sócio -->
+    <section id="socio" class="section section-accent">
       <div class="container">
-        <h2>Questões do Sócio</h2>
+        <h2 class="section-title-accent">Para Sócio</h2>
         <p class="section-lead">Principais dúvidas e pontos de atenção para membros do clube.</p>
-        <div class="grid">
-          <article class="card">
-            <h3>Custos e Economia</h3>
+        <div class="grid grid-feature">
+          <article class="card feature-card">
+            <h3><svg class="icon icon-lg"><use href="#icon-star"/></svg> Custos e Economia</h3>
             <p>Como funciona a mensalidade e quais economias reais posso esperar?</p>
           </article>
-          <article class="card">
-            <h3>Serviços Inclusos</h3>
+          <article class="card feature-card">
+            <h3><svg class="icon icon-lg"><use href="#icon-clipboard"/></svg> Serviços Inclusos</h3>
             <p>O que está coberto, como agendo e quais limites existem?</p>
           </article>
-          <article class="card">
-            <h3>Rede de Oficinas</h3>
+          <article class="card feature-card">
+            <h3><svg class="icon icon-lg"><use href="#icon-check-circle"/></svg> Rede de Oficinas</h3>
             <p>Como escolher uma oficina credenciada e garantir a qualidade?</p>
           </article>
-          <article class="card">
-            <h3>App e Suporte</h3>
+          <article class="card feature-card">
+            <h3><svg class="icon icon-lg"><use href="#icon-chat"/></svg> App e Suporte</h3>
             <p>Uso do aplicativo, histórico do veículo e atendimento 24h.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Questões do Credenciado -->
-    <section id="credenciado" class="section section-alt">
+    <!-- Para Credenciado -->
+    <section id="credenciado" class="section section-alt section-accent">
       <div class="container">
-        <h2>Questões do Credenciado</h2>
+        <h2 class="section-title-accent">Para Credenciado</h2>
         <p class="section-lead">Dúvidas comuns e orientações para oficinas credenciadas.</p>
-        <div class="grid">
-          <article class="card">
-            <h3>Demanda e Clientes</h3>
+        <div class="grid grid-feature">
+          <article class="card feature-card">
+            <h3><svg class="icon icon-lg"><use href="#icon-star"/></svg> Demanda e Clientes</h3>
             <p>Como recebo solicitações e como é feita a distribuição de serviços?</p>
           </article>
-          <article class="card">
-            <h3>Pagamentos</h3>
+          <article class="card feature-card">
+            <h3><svg class="icon icon-lg"><use href="#icon-check-circle"/></svg> Pagamentos</h3>
             <p>Prazos, formas de repasse e garantias de pagamento pela plataforma.</p>
           </article>
-          <article class="card">
-            <h3>Gestão Operacional</h3>
+          <article class="card feature-card">
+            <h3><svg class="icon icon-lg"><use href="#icon-clipboard"/></svg> Gestão Operacional</h3>
             <p>Uso do painel, controle de ordens, estoque e avaliação dos serviços.</p>
           </article>
-          <article class="card">
-            <h3>Suporte e Padrão</h3>
+          <article class="card feature-card">
+            <h3><svg class="icon icon-lg"><use href="#icon-chat"/></svg> Suporte e Padrão</h3>
             <p>Treinamentos, requisitos de qualidade e como falar com o suporte.</p>
           </article>
         </div>
@@ -361,8 +368,8 @@
             <li>Chat com oficinas credenciadas</li>
           </ul>
           <div class="store-badges">
-            <a class="badge-store" href="#">App Store</a>
-            <a class="badge-store" href="#">Google Play</a>
+            <a class="badge-store" href="https://apps.apple.com/br/app/v-car-clube/id6502299296" target="_blank"><svg class="icon"><use href="#icon-apple"/></svg> App Store</a>
+            <a class="badge-store" href="#"><svg class="icon"><use href="#icon-google-play"/></svg> Google Play</a>
           </div>
         </div>
         <div class="app-media">
@@ -503,8 +510,8 @@
           </a>
           <p>Plano de saúde veicular — cuidado que gera valor.</p>
           <div class="store-badges">
-            <a class="badge-store" href="#">App Store</a>
-            <a class="badge-store" href="#">Google Play</a>
+            <a class="badge-store" target="_blank" href="https://apps.apple.com/br/app/v-car-clube/id6502299296"><svg class="icon"><use href="#icon-apple"/></svg> App Store</a>
+            <a class="badge-store" href="#"><svg class="icon"><use href="#icon-google-play"/></svg> Google Play</a>
           </div>
         </div>
         <div class="footer-links">
