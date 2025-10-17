@@ -181,3 +181,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// Hero carousel (Home)
+const heroCarousel = document.querySelector('.hero-carousel .carousel');
+if (heroCarousel) {
+  const track = heroCarousel.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const prev = heroCarousel.querySelector('.carousel-nav.prev');
+  const next = heroCarousel.querySelector('.carousel-nav.next');
+  const dotsWrap = heroCarousel.querySelector('.carousel-dots');
+  let index = 0;
+
+  // Cria os dots dinamicamente
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot';
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `Ir para slide ${i + 1}`);
+    dot.addEventListener('click', () => { index = i; update(); resetAuto(); });
+    dotsWrap.appendChild(dot);
+  });
+
+  function update() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === index));
+  }
+  function go(delta) {
+    index = (index + delta + slides.length) % slides.length;
+    update();
+  }
+
+  // Navegação
+  prev && prev.addEventListener('click', () => { go(-1); resetAuto(); });
+  next && next.addEventListener('click', () => { go(1); resetAuto(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { go(-1); resetAuto(); }
+    else if (e.key === 'ArrowRight') { go(1); resetAuto(); }
+  });
+
+  // Auto-play
+  let timer;
+  function startAuto() { timer = setInterval(() => go(1), 10000); }
+  function stopAuto() { if (timer) clearInterval(timer); }
+  function resetAuto() { stopAuto(); startAuto(); }
+  function clearIntervalImmediate () { stopAuto(); }
+
+  heroCarousel.addEventListener('mouseenter', stopAuto);
+  heroCarousel.addEventListener('mouseleave', startAuto);
+  heroCarousel.addEventListener('focusin', stopAuto);
+  heroCarousel.addEventListener('focusout', startAuto);
+
+  // Inicializa
+  update();
+  startAuto();
+}
