@@ -179,7 +179,7 @@ img { max-width: 100%; display: block; }
 .badge-store { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.24); padding: .6rem .9rem; border-radius: .7rem; display: inline-flex; align-items: center; gap: .45rem; }
 .badge-store:hover { background: rgba(255,255,255,.18); }
 .badge-store .icon { width: 1.2rem; height: 1.2rem; }
-.phone { transform: rotate(9deg); width: 241px; height: 500px; background: #0b1020; border: 2px solid #111827; border-radius: 2rem; margin: 0 auto; }
+.phone { transform: rotate(0deg); width: 241px; height: 500px; background: #0b1020; border: 2px solid #111827; border-radius: 2rem; margin: 0 auto; }
 .phone-app { width: 241px; height: 500px; background: #0b1020; border: 2px solid #111827; border-radius: 2rem; box-shadow: 0 30px 60px rgba(0,0,0,.35); margin: 0 auto; }
 .phone-screen { background: rgba(255,255,255,.06); border-radius: 1.4rem; margin: .8rem; height: calc(100% - 1.6rem); overflow: hidden; }
 .screen-header { height: 48px; background: rgba(255,255,255,.08); }
