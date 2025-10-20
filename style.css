@@ -333,3 +333,191 @@ body { padding-top: 72px; }
 
 /* Empilhar cards na seção "Solução" */
 #solucao .grid { grid-template-columns: 1fr; }
+
+
+/* ========================================
+   SEÇÃO DE CREDENCIAMENTO DE OFICINAS
+   ======================================== */
+
+/* Grid de duas colunas */
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Informações do lado esquerdo */
+.credenciado-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.credenciado-highlight {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+}
+
+.credenciado-highlight strong {
+  font-weight: 600;
+}
+
+/* Lista de benefícios */
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Cards de benefícios individuais */
+.benefit-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.benefit-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.15);
+  border-color: #22c55e;
+}
+
+/* Ícones dos benefícios */
+.benefit-icon-small {
+  font-size: 2.5rem;
+  color: #22c55e;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover .benefit-icon-small {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Textos dos benefícios */
+.benefit-item h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.benefit-item:hover h4 {
+  color: #22c55e;
+}
+
+.benefit-item p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Formulário do lado direito */
+.credenciado-form-wrap {
+  position: sticky;
+  top: 2rem;
+}
+
+.credenciado-form-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.credenciado-form-card h3 {
+  font-size: 1.5rem;
+  color: #22c55e;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.credenciado-form-card > p {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Botão de largura completa */
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+@media (max-width: 968px) {
+  .grid-2-col {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .credenciado-form-wrap {
+    position: static;
+  }
+
+  .credenciado-info h2 {
+    font-size: 2rem;
+  }
+
+  .benefit-item {
+    padding: 1.25rem;
+  }
+
+  .benefit-icon-small {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .credenciado-info h2 {
+    font-size: 1.75rem;
+  }
+
+  .credenciado-highlight {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .benefit-item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .benefit-icon-small {
+    margin-top: 0;
+  }
+
+  .credenciado-form-card {
+    padding: 1.5rem;
+  }
+}
