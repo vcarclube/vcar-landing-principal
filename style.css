@@ -334,15 +334,14 @@ body { padding-top: 72px; }
 /* Empilhar cards na seção "Solução" */
 #solucao .grid { grid-template-columns: 1fr; }
 
-
 /* ========================================
    SEÇÃO DE CREDENCIAMENTO DE OFICINAS
    ======================================== */
 
-/* Grid de duas colunas */
+/* Grid de duas colunas - mais espaço para os cards */
 .grid-2-col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 3rem;
   align-items: start;
 }
@@ -367,10 +366,10 @@ body { padding-top: 72px; }
   font-weight: 600;
 }
 
-/* Lista de benefícios */
+/* Lista de benefícios em GRID 2 COLUNAS */
 .benefits-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -378,8 +377,9 @@ body { padding-top: 72px; }
 /* Cards de benefícios individuais */
 .benefit-item {
   display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   padding: 1.5rem;
   background: white;
   border-radius: 12px;
@@ -399,7 +399,6 @@ body { padding-top: 72px; }
   font-size: 2.5rem;
   color: #22c55e;
   flex-shrink: 0;
-  margin-top: 0.25rem;
   background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
   width: 60px;
   height: 60px;
@@ -408,6 +407,7 @@ body { padding-top: 72px; }
   justify-content: center;
   border-radius: 12px;
   transition: all 0.3s ease;
+  margin-bottom: 1rem;
 }
 
 .benefit-item:hover .benefit-icon-small {
@@ -438,7 +438,7 @@ body { padding-top: 72px; }
 /* Formulário do lado direito */
 .credenciado-form-wrap {
   position: sticky;
-  top: 2rem;
+  top: 90px;
 }
 
 .credenciado-form-card {
@@ -446,6 +446,7 @@ body { padding-top: 72px; }
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 420px;
 }
 
 .credenciado-form-card h3 {
@@ -478,8 +479,16 @@ body { padding-top: 72px; }
     gap: 2rem;
   }
 
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
+
   .credenciado-form-wrap {
     position: static;
+  }
+
+  .credenciado-form-card {
+    max-width: 100%;
   }
 
   .credenciado-info h2 {
@@ -505,16 +514,6 @@ body { padding-top: 72px; }
   .credenciado-highlight {
     padding: 1rem;
     font-size: 1rem;
-  }
-
-  .benefit-item {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .benefit-icon-small {
-    margin-top: 0;
   }
 
   .credenciado-form-card {
